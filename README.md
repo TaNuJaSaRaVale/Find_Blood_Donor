@@ -84,7 +84,12 @@ npm run dev                 # app on http://localhost:5173
 | `priya@raktsetu.in` | `demo1234` | Requester view: sees pledged donor's phone, can confirm donation |
 | `rare@raktsetu.in` | `demo1234` | Bombay (hh) rare donor |
 
-> No MongoDB installed? Run one with Docker: `docker run -d --name raktsetu-mongo -p 27017:27017 mongo:7`
+> No MongoDB installed? Run one with Docker (auto-starts on boot):
+> `docker run -d --name raktsetu-mongo --restart unless-stopped -p 27017:27017 mongo:7`
+>
+> ⚠️ On **Linux kernel 6.19+** (e.g. Ubuntu with kernel 7.x) the native MongoDB 8.0 server refuses to start
+> ([SERVER-121912](https://jira.mongodb.org/browse/SERVER-121912)). Use the Docker command above instead.
+> Compass and `mongosh` installed on the host still connect normally to `127.0.0.1:27017`.
 
 ---
 

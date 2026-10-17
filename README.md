@@ -93,21 +93,3 @@ npm run dev                 # app on http://localhost:5173
 
 ---
 
-## 🧪 Suggested demo flow (5 minutes)
-1. **Home**: live stats come from aggregation.
-2. **Find Donors**: choose A+, show "All compatible" (A+, A−, O+, O−) vs "Exact", plus the map and match score.
-3. Log in as **priya** → **SOS**: post a critical request, and the screen shows "N donors alerted".
-4. Log in as **demo** in another browser → 🔔 notification → open the request → **I will donate**.
-5. Back as **priya** → the donor's phone is now visible → **Confirm donated** → request becomes *fulfilled*.
-6. As **demo** → **Passport**: the countdown ring now shows 90 days, a badge is earned, and the history row is *verified*.
-7. **Insights** → Shortage Radar per city.
-8. Open **MongoDB Compass** to show the documents and indexes (2dsphere, TTL).
-
-## 📚 Docs
-- [docs/API.md](docs/API.md): every REST endpoint
-- [docs/DATABASE.md](docs/DATABASE.md): collections, schema design, indexes, queries
-- [docs/VIVA.md](docs/VIVA.md): likely viva questions with answers
-- [docs/MOBILE.md](docs/MOBILE.md): plan for converting to a mobile app
-
-## 🛠️ Tech stack
-React 18 · React Router · Axios · Leaflet (OpenStreetMap) · Chart.js · Node.js · Express 5 · MongoDB · Mongoose 8 · JWT · bcrypt · Helmet · express-rate-limit

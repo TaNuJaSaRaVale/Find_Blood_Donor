@@ -1,0 +1,12 @@
+{
+  "name": "RaktSetu – Blood Donor Finder",
+  "short_name": "RaktSetu",
+  "description": "Find compatible, eligible blood donors near you in seconds.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff7f8",
+  "theme_color": "#c81e3a",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

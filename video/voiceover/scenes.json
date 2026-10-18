@@ -1,0 +1,46 @@
+[
+  {
+    "id": "01-intro",
+    "text": "Every two seconds, someone in India needs blood. But in an emergency, finding the right donor, at the right time, is still a matter of luck. Meet Rakt Setu. A bridge of blood, between donors and patients."
+  },
+  {
+    "id": "02-problem",
+    "text": "Think about what usually happens. The hospital says, arrange blood urgently. The family starts forwarding messages on WhatsApp. Many people reply, but their blood group does not match. Some live too far away. And some donated just last month, so they cannot donate again. Precious hours are lost."
+  },
+  {
+    "id": "03-architecture",
+    "text": "Rakt Setu solves this with a full stack MERN application. The React frontend talks to a REST API, built with Node JS and Express. All the data lives in MongoDB, connected through Mongoose, in five collections: users, blood requests, donations, camps, and notifications."
+  },
+  {
+    "id": "04-find",
+    "text": "Let us start with Find Donors. Choose the patient's blood group, and the hospital location. Here is the first unique thing. Rakt Setu does not search only the same blood group. An A positive patient can safely receive from A positive, A negative, O positive and O negative. So we search all of them. One MongoDB geo near aggregation finds nearby donors, removes anyone who is not eligible today, and ranks them with a match score, based on distance, reliability, and exact group match."
+  },
+  {
+    "id": "05-sos",
+    "text": "In an emergency, just press S O S. Enter the blood group, the hospital, and the units needed. Every compatible donor within twenty five kilometres, who is eligible today, gets an instant alert. Donor phone numbers stay private. Only when a donor pledges to help, the family can see the number. After the donation, the family confirms it in the app, and the request is marked fulfilled, automatically."
+  },
+  {
+    "id": "06-passport",
+    "text": "Every donor gets a Donor Passport. The eligibility ring counts down the recovery period. Ninety days for men, and one hundred and twenty days for women, as per Indian guidelines. Donors earn badges, level up from Bronze to Platinum, and see how many lives they have saved. Even the rare Bombay blood group is supported, and matched only with Bombay patients."
+  },
+  {
+    "id": "07-camps",
+    "text": "Colleges and organisations can host donation camps. Nearby donors are notified automatically. Seats are booked with an atomic MongoDB update, so even if two people click at the same moment, a camp can never be overbooked."
+  },
+  {
+    "id": "08-insights",
+    "text": "The Insights page turns data into decisions. Charts show donors by blood group, and donations every month. And the Shortage Radar compares open demand with eligible donors in each city, so you instantly know which blood group is running short."
+  },
+  {
+    "id": "09-database",
+    "text": "Under the hood, Rakt Setu uses the real power of MongoDB. Two D sphere indexes for location search. T T L indexes, that automatically clean up expired requests and old notifications. Embedded arrays for donor responses. And aggregation pipelines with facet, group and date to string, for live statistics."
+  },
+  {
+    "id": "10-tips",
+    "text": "To use Rakt Setu effectively, keep your profile and location updated. Switch off availability when you are travelling, or unwell. Use S O S only for real emergencies. Share requests on WhatsApp. And always confirm donations, so your donor's passport stays accurate."
+  },
+  {
+    "id": "11-outro",
+    "text": "Rakt Setu. Find a compatible donor, near you, in seconds. Because every drop counts."
+  }
+]

@@ -1,0 +1,329 @@
+[
+  {
+    "id": "01-intro",
+    "file": "voiceover/01-intro.mp3",
+    "seconds": 17.328,
+    "captions": [
+      {
+        "start": 0.1,
+        "end": 4.328,
+        "text": "Every two seconds, someone in India needs blood."
+      },
+      {
+        "start": 4.2780000000000005,
+        "end": 11.358,
+        "text": "But in an emergency, finding the right donor, at the right time, is still a matter of luck."
+      },
+      {
+        "start": 11.358,
+        "end": 13.233,
+        "text": "Meet Rakt Setu."
+      },
+      {
+        "start": 13.233,
+        "end": 17.259,
+        "text": "A bridge of blood, between donors and patients."
+      }
+    ]
+  },
+  {
+    "id": "02-problem",
+    "file": "voiceover/02-problem.mp3",
+    "seconds": 25.08,
+    "captions": [
+      {
+        "start": 0.1,
+        "end": 2.9459999999999997,
+        "text": "Think about what usually happens."
+      },
+      {
+        "start": 2.896,
+        "end": 6.526,
+        "text": "The hospital says, arrange blood urgently."
+      },
+      {
+        "start": 6.526,
+        "end": 10.468,
+        "text": "The family starts forwarding messages on WhatsApp."
+      },
+      {
+        "start": 10.468,
+        "end": 15.096,
+        "text": "Many people reply, but their blood group does not match."
+      },
+      {
+        "start": 15.096,
+        "end": 17.439,
+        "text": "Some live too far away."
+      },
+      {
+        "start": 17.439,
+        "end": 22.608,
+        "text": "And some donated just last month, so they cannot donate again."
+      },
+      {
+        "start": 22.608,
+        "end": 25.036,
+        "text": "Precious hours are lost."
+      }
+    ]
+  },
+  {
+    "id": "03-architecture",
+    "file": "voiceover/03-architecture.mp3",
+    "seconds": 21.504,
+    "captions": [
+      {
+        "start": 0.1,
+        "end": 4.773,
+        "text": "Rakt Setu solves this with a full stack MERN application."
+      },
+      {
+        "start": 4.723,
+        "end": 10.853,
+        "text": "The React frontend talks to a REST API, built with Node JS and Express."
+      },
+      {
+        "start": 10.853,
+        "end": 21.454,
+        "text": "All the data lives in MongoDB, connected through Mongoose, in five collections: users, blood requests, donations, camps, and notifications."
+      }
+    ]
+  },
+  {
+    "id": "04-find",
+    "file": "voiceover/04-find.mp3",
+    "seconds": 38.328,
+    "captions": [
+      {
+        "start": 0.1,
+        "end": 3.162,
+        "text": "Let us start with Find Donors."
+      },
+      {
+        "start": 3.112,
+        "end": 7.4030000000000005,
+        "text": "Choose the patient's blood group, and the hospital location."
+      },
+      {
+        "start": 7.4030000000000005,
+        "end": 10.084,
+        "text": "Here is the first unique thing."
+      },
+      {
+        "start": 10.084,
+        "end": 14.23,
+        "text": "Rakt Setu does not search only the same blood group."
+      },
+      {
+        "start": 14.23,
+        "end": 21.538,
+        "text": "An A positive patient can safely receive from A positive, A negative, O positive and O negative."
+      },
+      {
+        "start": 21.538,
+        "end": 23.918,
+        "text": "So we search all of them."
+      },
+      {
+        "start": 23.918,
+        "end": 38.281,
+        "text": "One MongoDB geo near aggregation finds nearby donors, removes anyone who is not eligible today, and ranks them with a match score, based on distance, reliability, and exact group match."
+      }
+    ]
+  },
+  {
+    "id": "05-sos",
+    "file": "voiceover/05-sos.mp3",
+    "seconds": 30.672,
+    "captions": [
+      {
+        "start": 0.1,
+        "end": 7.874,
+        "text": "In an emergency, just press S O S. Enter the blood group, the hospital, and the units needed."
+      },
+      {
+        "start": 7.824,
+        "end": 15.276,
+        "text": "Every compatible donor within twenty five kilometres, who is eligible today, gets an instant alert."
+      },
+      {
+        "start": 15.276,
+        "end": 18.353,
+        "text": "Donor phone numbers stay private."
+      },
+      {
+        "start": 18.353,
+        "end": 23.137,
+        "text": "Only when a donor pledges to help, the family can see the number."
+      },
+      {
+        "start": 23.137,
+        "end": 30.612,
+        "text": "After the donation, the family confirms it in the app, and the request is marked fulfilled, automatically."
+      }
+    ]
+  },
+  {
+    "id": "06-passport",
+    "file": "voiceover/06-passport.mp3",
+    "seconds": 27.288,
+    "captions": [
+      {
+        "start": 0.1,
+        "end": 3.175,
+        "text": "Every donor gets a Donor Passport."
+      },
+      {
+        "start": 3.125,
+        "end": 6.971,
+        "text": "The eligibility ring counts down the recovery period."
+      },
+      {
+        "start": 6.971,
+        "end": 13.918,
+        "text": "Ninety days for men, and one hundred and twenty days for women, as per Indian guidelines."
+      },
+      {
+        "start": 13.918,
+        "end": 20.793,
+        "text": "Donors earn badges, level up from Bronze to Platinum, and see how many lives they have saved."
+      },
+      {
+        "start": 20.793,
+        "end": 27.235,
+        "text": "Even the rare Bombay blood group is supported, and matched only with Bombay patients."
+      }
+    ]
+  },
+  {
+    "id": "07-camps",
+    "file": "voiceover/07-camps.mp3",
+    "seconds": 17.832,
+    "captions": [
+      {
+        "start": 0.1,
+        "end": 4.605,
+        "text": "Colleges and organisations can host donation camps."
+      },
+      {
+        "start": 4.555,
+        "end": 8.185,
+        "text": "Nearby donors are notified automatically."
+      },
+      {
+        "start": 8.185,
+        "end": 17.776,
+        "text": "Seats are booked with an atomic MongoDB update, so even if two people click at the same moment, a camp can never be overbooked."
+      }
+    ]
+  },
+  {
+    "id": "08-insights",
+    "file": "voiceover/08-insights.mp3",
+    "seconds": 18.984,
+    "captions": [
+      {
+        "start": 0.1,
+        "end": 4.064,
+        "text": "The Insights page turns data into decisions."
+      },
+      {
+        "start": 4.014,
+        "end": 9.146,
+        "text": "Charts show donors by blood group, and donations every month."
+      },
+      {
+        "start": 9.146,
+        "end": 18.918,
+        "text": "And the Shortage Radar compares open demand with eligible donors in each city, so you instantly know which blood group is running short."
+      }
+    ]
+  },
+  {
+    "id": "09-database",
+    "file": "voiceover/09-database.mp3",
+    "seconds": 25.632,
+    "captions": [
+      {
+        "start": 0.1,
+        "end": 4.845,
+        "text": "Under the hood, Rakt Setu uses the real power of MongoDB."
+      },
+      {
+        "start": 4.795,
+        "end": 8.329,
+        "text": "Two D sphere indexes for location search."
+      },
+      {
+        "start": 8.329,
+        "end": 15.504,
+        "text": "T T L indexes, that automatically clean up expired requests and old notifications."
+      },
+      {
+        "start": 15.504,
+        "end": 18.81,
+        "text": "Embedded arrays for donor responses."
+      },
+      {
+        "start": 18.81,
+        "end": 25.564,
+        "text": "And aggregation pipelines with facet, group and date to string, for live statistics."
+      }
+    ]
+  },
+  {
+    "id": "10-tips",
+    "file": "voiceover/10-tips.mp3",
+    "seconds": 22.824,
+    "captions": [
+      {
+        "start": 0.1,
+        "end": 5.8309999999999995,
+        "text": "To use Rakt Setu effectively, keep your profile and location updated."
+      },
+      {
+        "start": 5.781,
+        "end": 10.312,
+        "text": "Switch off availability when you are travelling, or unwell."
+      },
+      {
+        "start": 10.312,
+        "end": 14.254,
+        "text": "Use S O S only for real emergencies."
+      },
+      {
+        "start": 14.254,
+        "end": 16.959,
+        "text": "Share requests on WhatsApp."
+      },
+      {
+        "start": 16.959,
+        "end": 22.764,
+        "text": "And always confirm donations, so your donor's passport stays accurate."
+      }
+    ]
+  },
+  {
+    "id": "11-outro",
+    "file": "voiceover/11-outro.mp3",
+    "seconds": 8.448,
+    "captions": [
+      {
+        "start": 0.1,
+        "end": 1.708,
+        "text": "Rakt Setu."
+      },
+      {
+        "start": 1.658,
+        "end": 5.889,
+        "text": "Find a compatible donor, near you, in seconds."
+      },
+      {
+        "start": 5.889,
+        "end": 8.401,
+        "text": "Because every drop counts."
+      }
+    ]
+  }
+]

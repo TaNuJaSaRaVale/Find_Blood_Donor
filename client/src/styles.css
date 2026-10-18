@@ -234,7 +234,7 @@ input[type='range'] { accent-color: var(--red); width: 100%; }
 
 /* ---------- Donor cards ---------- */
 .donor-list { display: flex; flex-direction: column; gap: 10px; }
-.donor-card { display: flex; align-items: center; gap: 12px; padding: 12px 14px; flex-wrap: wrap; }
+.donor-card { display: flex; align-items: center; gap: 12px; padding: 12px 14px; flex-wrap: wrap; text-align: left; }
 .donor-card__rank { font-weight: 800; color: var(--muted); width: 28px; }
 .donor-card__info { display: flex; flex-direction: column; flex: 1; min-width: 160px; }
 .donor-card__info .muted { font-size: 0.85rem; }

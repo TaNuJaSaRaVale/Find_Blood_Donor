@@ -1,0 +1,23 @@
+# Render Blueprint: one Web Service serves API + React (client/dist).
+# Connect this repo in Render → New → Blueprint → apply this file.
+# Set JWT_SECRET in the dashboard (or uncomment generateValue below).
+
+services:
+  - type: web
+    name: raktsetu
+    runtime: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: CORS_ORIGIN
+        value: "*"

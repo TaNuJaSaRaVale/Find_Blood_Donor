@@ -53,9 +53,16 @@ Database_MiniProject/
 ├── server/          Backend REST API (Node + Express + Mongoose)  → see server/README.md
 ├── client/          Frontend web app (React + Vite)               → see client/README.md
 ├── docs/            API reference, database design, viva notes, mobile plan
+├── video/           4-min explainer video made with Remotion + Indian English voiceover → see video/README.md
 └── README.md        You are here
 ```
 Every folder has its own `README.md` explaining what's inside.
+
+---
+
+## 🌐 Deploy online
+
+Free hosting: **MongoDB Atlas** + **Render** (one URL for API and web app). Step-by-step guide: [docs/DEPLOY.md](docs/DEPLOY.md).
 
 ---
 

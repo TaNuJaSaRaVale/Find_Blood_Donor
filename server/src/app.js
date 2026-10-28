@@ -13,7 +13,8 @@ import { notFound, errorHandler } from './middleware/errorHandler.js';
 export function createApp() {
   const app = express();
 
-  app.use(helmet({ contentSecurityPolicy: false })); // safe HTTP headers
+  // safe HTTP headers; keep the Referer on cross-origin requests — OSM tiles return 403 without it
+  app.use(helmet({ contentSecurityPolicy: false, referrerPolicy: { policy: 'strict-origin-when-cross-origin' } }));
   app.use(cors({ origin: env.CORS_ORIGIN === '*' ? true : env.CORS_ORIGIN.split(',') }));
   app.use(express.json({ limit: '100kb' }));
   if (env.NODE_ENV !== 'test') app.use(morgan('dev')); // logs every request: "GET /api/camps 200 12ms"
